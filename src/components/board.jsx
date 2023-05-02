@@ -1,5 +1,6 @@
 import Card from "./card"
 import List from "./list"
+import {todoList, inProgressList, doneList } from './data.js'
 
 function Board() {
     return (
@@ -11,21 +12,33 @@ function Board() {
             </div>
             <main className="flex flex-1 gap-6">
                 <List title='TO DO'>
-                    <Card
-                    title='Implementando incio'
-                    />
-                    <Card
-                    title='Implementando incio'
-                    />
-                    <Card
-                    title='Implementando incio'
-                    />
-                    <Card
-                    title='Implementando incio'
-                    />
+                    {
+                        todoList.map(item=>(
+                            <Card
+                            {...item} key={item.id}
+                            />
+                        ))
+                    }
                 </List>
-                <List/>
-                <List/>
+                <List title='In Progress'>
+                    {
+                        inProgressList.map(item=>(
+                            <Card
+                            {...item} key={item.id}
+                            />
+                        ))
+                    }
+                </List>
+                <List title='Done'>
+                    {
+                        doneList.map(item=>(
+                            <Card
+                            {...item} key={item.id}
+                            />
+                        ))
+                    }
+                </List>
+                
             </main>
         </div>
     )

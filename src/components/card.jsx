@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 function Card({title,user,comments=[]}) {
+    console.log("holamac")
     
     return (
         <div draggable  className="flex flex-col gap-4 p-2 text-gray-900 bg-white rounded">
@@ -18,6 +19,7 @@ function Card({title,user,comments=[]}) {
                     {comments.length > 0 ? comments.length : null}
                 </div>
                 <Image src={user.avatar} width={20} height={20} alt="avatar"/>
+                
             </div>
         </div>
     )

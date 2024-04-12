@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 function Card({title,user,comments=[]}) {
-    console.log("holamac")
+    console.log("juju")
     
     return (
         <div draggable  className="flex flex-col gap-4 p-2 text-gray-900 bg-white rounded">
